@@ -3,7 +3,6 @@ from flask import Flask, render_template, request,json,jsonify
 app = Flask(__name__)
 
 def get_user_data(user_id):
-    # Helper function to retrieve user data based on user ID
     with open('users.txt', 'r') as file:
         for line in file:
             user_data = json.loads(line)
